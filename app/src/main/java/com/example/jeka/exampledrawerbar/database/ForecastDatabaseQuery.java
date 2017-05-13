@@ -88,6 +88,10 @@ public class ForecastDatabaseQuery {
     }
 
     public void addCurrentValuesDatabase(WeatherItem item){
+        if (item.getTemperature() == null){
+            return;
+        }
+
         if (!item.getTemperature().equals("")){
             sDatabase.delete(ForecastDbSchema.CurrentWeatherTable.CURRENT_NAME, null, null);
         }

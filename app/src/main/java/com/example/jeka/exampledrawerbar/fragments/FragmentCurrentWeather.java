@@ -435,12 +435,15 @@ public class FragmentCurrentWeather extends VisibleFragment {
 
             mWeatherDetailList = new OpenWeatherFetch().downloadDetailWeather(mQuery);
             String lastDetailResult = QueryPreferenceFragment.getDetailLastResultId(mContex);
-            String sDateId = mWeatherDetailList.get(0).getDate();
 
-            if (!lastDetailResult.equals(sDateId)){
-                Log.i(TAG, "Write data in detail table");
-                mDatabaseQuery.addDetailValuesDatabase(mWeatherDetailList);
-                QueryPreferenceFragment.setDetailLastResultId(mContex ,sDateId);
+            if (!mWeatherDetailList.isEmpty()) {
+                String sDateId = mWeatherDetailList.get(0).getDate();
+
+                if (!lastDetailResult.equals(sDateId)) {
+                    Log.i(TAG, "Write data in detail table");
+                    mDatabaseQuery.addDetailValuesDatabase(mWeatherDetailList);
+                    QueryPreferenceFragment.setDetailLastResultId(mContex, sDateId);
+                }
             }
             return mDatabaseQuery.getDetailFromDatabase();
         }
