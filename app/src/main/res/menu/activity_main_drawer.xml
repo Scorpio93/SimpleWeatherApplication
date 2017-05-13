@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_week"
+            android:icon="@drawable/ic_drawer_week"
+            android:title="@string/drawer_list_week" />
+        <item
+            android:id="@+id/nav_today"
+            android:icon="@drawable/ic_drawer_today"
+            android:title="@string/drawer_list_today" />
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/ic_drawer_map"
+            android:title="@string/drawer_list_map"/>
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_drawer_settings"
+            android:title="@string/drawer_list_settings" />
+    </group>
+    <item android:title="@string/drawer_list_communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:title="@string/drawer_list_share"
+                android:icon="@drawable/ic_drawer_share"/>
+            <item
+                android:id="@+id/nav_comment"
+                android:title="@string/drawer_list_comment"
+                android:icon="@drawable/ic_drawer_comment"/>
+            <item
+                android:id="@+id/nav_about"
+                android:title="@string/drawer_list_about"
+                android:icon="@drawable/ic_drawer_list_about"/>
+        </menu>
+    </item>
+
+</menu>

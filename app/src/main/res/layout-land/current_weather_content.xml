@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/linear_right_left_margin"
+    android:layout_marginRight="@dimen/linear_right_left_margin"
+    android:layout_marginTop="@dimen/linear_bottom_top_margin"
+    android:layout_marginBottom="@dimen/linear_bottom_top_margin"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:textSize="24dp"
+        android:textColor="@android:color/background_dark"
+        android:id="@+id/text_fragment_city"/>
+
+
+    <TextView
+        android:id="@+id/text_fragment_update_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"/>
+
+
+    <TextView
+        android:id="@+id/text_fragment_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:baselineAligned="false">
+
+        <TextView
+            android:id="@+id/text_fragment_temperature"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:textSize="32dp"
+            android:textColor="@android:color/background_dark" />
+
+        <ImageView
+            android:id="@+id/image_fragment_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/image_fragment_icon_wind"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_current_wind_image"/>
+
+            <TextView
+                android:id="@+id/text_fragment_wind"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:paddingLeft="2dp"
+                android:textColor="@android:color/background_dark"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/image_fragment_icon_humidity"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_current_humidity_image"/>
+
+            <TextView
+                android:id="@+id/text_fragment_humidity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:paddingLeft="2dp"
+                android:textColor="@android:color/background_dark"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/image_fragment_icon_clouds"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_current_clouds_image"/>
+
+            <TextView
+                android:id="@+id/text_fragment_clouds"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:paddingLeft="2dp"
+                android:textColor="@android:color/background_dark"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/image_fragment_icon_sun"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_current_sun_image"/>
+
+            <TextView
+                android:id="@+id/text_fragment_sun"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:paddingLeft="2dp"
+                android:textColor="@android:color/background_dark"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

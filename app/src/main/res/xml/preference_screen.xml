@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <PreferenceCategory
+            android:title="@string/preference_category_basic">
+
+                <ListPreference
+                    android:key="pref_key_list_forecast_days"
+                    android:title="@string/pref_title_forecast_days"
+                    android:defaultValue="@string/defaultDay"
+                    android:summary="@string/pref_summary_forecast_days"
+                    android:entries="@array/forecast_days"
+                    android:entryValues="@array/forecast_days"/>
+
+                <CheckBoxPreference
+                    android:key="isUpdateOn"
+                    android:defaultValue="false"
+                    android:title="@string/pref_title_update"
+                    android:summaryOff="@string/pref_summary_off_update"
+                    android:summaryOn="@string/pref_summary_on_update"/>
+
+                <CheckBoxPreference
+                    android:key="isAlarmOn"
+                    android:defaultValue="false"
+                    android:title="@string/pref_title_alarm"
+                    android:summaryOff="@string/pref_summary_off_message"
+                    android:summaryOn="@string/pref_summary_on_message"/>
+
+        </PreferenceCategory>
+
+</PreferenceScreen>

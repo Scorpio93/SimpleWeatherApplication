@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_size">14sp</dimen>
+    <dimen name="card_view_margin">24dp</dimen>
+    <dimen name="linear_bottom_top_margin">12dp</dimen>
+    <dimen name="linear_right_left_margin">16dp</dimen>
+    <dimen name="main_list_margin">24dp</dimen>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+                <!-- Customize your theme here. -->
+                <item name="android:layout">@layout/fragment_preferences</item>
+                <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+                <item name="colorPrimary">@color/colorPrimary</item>
+                <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+                <item name="colorAccent">@color/colorAccent</item>
+                <item name="android:windowTranslucentStatus">true</item>
+                <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+                <item name="android:textViewStyle">@style/TextStyleTheme</item>
+        </style>
+</resources>

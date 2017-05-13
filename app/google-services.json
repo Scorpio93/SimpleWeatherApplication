@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "951324442098",
+    "firebase_url": "https://exampledrawerbar.firebaseio.com",
+    "project_id": "exampledrawerbar",
+    "storage_bucket": "exampledrawerbar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951324442098:android:eb813892e5278ec1",
+        "android_client_info": {
+          "package_name": "com.example.jeka.exampledrawerbar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "951324442098-m481lt6gm9o2o5f99r59thged9vbnteo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.jeka.exampledrawerbar",
+            "certificate_hash": "a6884ddee42eda02f6b960a7a8558cd1833c3894"
+          }
+        },
+        {
+          "client_id": "951324442098-1bc3p205b2ud0kac80sdkhjl7hg0ludu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCducgdZsxE-38Mo4c1tIOzfyKckdvMOFk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "951324442098-1bc3p205b2ud0kac80sdkhjl7hg0ludu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
