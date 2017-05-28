@@ -21,13 +21,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.jeka.exampledrawerbar.R;
+import com.example.jeka.exampledrawerbar.Utils.AnimationUtils;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
 import com.google.android.gms.common.api.ResultCallback;
@@ -133,13 +133,7 @@ public class FragmentMap extends Fragment implements OnMapReadyCallback,
                 .build();
 
         mMyLocationButton = (FloatingActionButton) view.findViewById(R.id.fab_my_location);
-        AnimatorSet animatorScale = new AnimatorSet();
-        animatorScale.setDuration(200).playTogether(
-                ObjectAnimator.ofFloat(mMyLocationButton, View.SCALE_X, 0f, 1f),
-                ObjectAnimator.ofFloat(mMyLocationButton, View.SCALE_Y, 0f, 1f)
-        );
-        animatorScale.setStartDelay(150);
-        animatorScale.start();
+        AnimationUtils.show(mMyLocationButton);
         mMyLocationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

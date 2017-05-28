@@ -44,6 +44,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.jeka.exampledrawerbar.R;
+import com.example.jeka.exampledrawerbar.Utils.AnimationUtils;
 import com.example.jeka.exampledrawerbar.Utils.HeaderView;
 import com.example.jeka.exampledrawerbar.database.ForecastDatabaseQuery;
 import com.example.jeka.exampledrawerbar.model.OpenWeatherFetch;
@@ -147,13 +148,7 @@ public class FragmentWeatherMain extends VisibleFragment
         mCallbacks.onDrawerToggleClick(mToolbar);
 
         mFloatingButton = (FloatingActionButton) view.findViewById(R.id.fragment_fab);
-        AnimatorSet floatingButtonAnimate= new AnimatorSet();
-        floatingButtonAnimate.setDuration(200).playTogether(
-                ObjectAnimator.ofFloat(mFloatingButton, View.SCALE_X, 0f, 1f),
-                ObjectAnimator.ofFloat(mFloatingButton, View.SCALE_Y, 0f, 1f)
-        );
-        floatingButtonAnimate.setStartDelay(150);
-        floatingButtonAnimate.start();
+        AnimationUtils.show(mFloatingButton);
 
         mFloatingButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -282,25 +277,7 @@ public class FragmentWeatherMain extends VisibleFragment
             mIconDownloader.start();
             mIconDownloader.getLooper();
 
-            mRecyclerView.getViewTreeObserver()
-                    .addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
-                        @Override
-                        public boolean onPreDraw() {
-                            mRecyclerView.getViewTreeObserver().removeOnPreDrawListener(this);
-
-                            for (int i = 0; i < mRecyclerView.getChildCount(); i++) {
-                                View item = mRecyclerView.getChildAt(i);
-                                AnimatorSet floatingButtonAnimate= new AnimatorSet();
-                                floatingButtonAnimate.setDuration(200).playTogether(
-                                        ObjectAnimator.ofFloat(item, View.SCALE_X, 0f, 1f),
-                                        ObjectAnimator.ofFloat(item, View.SCALE_Y, 0f, 1f)
-                                );
-                                floatingButtonAnimate.setStartDelay(i * 70);
-                                floatingButtonAnimate.start();
-                            }
-                            return true;
-                        }
-                    });
+            AnimationUtils.showListItems(mRecyclerView);
         }
     }
 

@@ -33,6 +33,7 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.jeka.exampledrawerbar.Utils.AnimationUtils;
 import com.example.jeka.exampledrawerbar.database.ForecastDatabaseQuery;
 import com.example.jeka.exampledrawerbar.network.IconDownloader;
 import com.example.jeka.exampledrawerbar.R;
@@ -148,7 +149,7 @@ public class FragmentCurrentWeather extends VisibleFragment {
                 @Override
                 public void onIconDownloaded(ImageView target, Bitmap icon) {
                     if (isAdded()){
-                        animateStartView();
+                        AnimationUtils.show(mIconImageView);
                         Drawable drawable = new BitmapDrawable(getResources(), icon);
                         target.setImageDrawable(drawable);
                     }
@@ -286,15 +287,6 @@ public class FragmentCurrentWeather extends VisibleFragment {
             sBuffer = simpleDateFormat.format(calendar.getTime());
         }
         return sBuffer;
-    }
-
-    private void animateStartView(){
-        AnimatorSet expandImageAnimate = new AnimatorSet();
-        expandImageAnimate.setDuration(200).playTogether(
-                ObjectAnimator.ofFloat(mIconImageView, View.SCALE_X, 0f, 1f),
-                ObjectAnimator.ofFloat(mIconImageView, View.SCALE_Y, 0f, 1f)
-        );
-        expandImageAnimate.start();
     }
 
     private void bindingDataForDay(WeatherItem data){
