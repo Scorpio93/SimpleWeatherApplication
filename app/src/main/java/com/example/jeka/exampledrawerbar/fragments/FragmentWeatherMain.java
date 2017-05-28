@@ -96,9 +96,9 @@ public class FragmentWeatherMain extends VisibleFragment
     }
 
     @Override
-    public void onAttach(Activity activity){
-        super.onAttach(activity);
-        mCallbacks = (Callbacks) activity;
+    public void onAttach(Context context){
+        super.onAttach(context);
+        mCallbacks = (Callbacks) context;
     }
 
     @Override

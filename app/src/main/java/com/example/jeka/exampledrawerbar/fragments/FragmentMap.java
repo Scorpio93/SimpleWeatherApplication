@@ -4,6 +4,7 @@ import android.Manifest;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
+import android.content.Context;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -86,9 +87,9 @@ public class FragmentMap extends Fragment implements OnMapReadyCallback,
     }
 
     @Override
-    public void onAttach(Activity activity){
-        super.onAttach(activity);
-        mCallbacks = (FragmentWeatherMain.Callbacks) activity;
+    public void onAttach(Context context){
+        super.onAttach(context);
+        mCallbacks = (FragmentWeatherMain.Callbacks) context;
     }
 
     @Override
