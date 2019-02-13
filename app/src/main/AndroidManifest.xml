@@ -22,7 +22,7 @@
     android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyDmv1yap0kI1M50VzvTLZxEO5Wu6pVl9bU"/>
+            android:value="AIzaSyDa6mvDiyXCoM8g0Z5vZYKm9MKx1_R8DQ4"/>
         <activity android:name=".activities.WeatherMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

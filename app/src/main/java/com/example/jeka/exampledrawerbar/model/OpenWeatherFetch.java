@@ -16,7 +16,7 @@ import java.util.List;
 public class OpenWeatherFetch {
 
     private static final String TAG = "OpenWeatherFetch";
-    private static final String API_KEY = "3798141df4bc230c87920ed24304f246";
+    public static final String API_KEY = "6cbdbc487908cd60b513d87b2d57543d";
     private static final Uri ENDPOINT_FORECAST = Uri.parse("http://api.openweathermap.org/data/2.5/forecast/daily")
             .buildUpon()
             .appendQueryParameter("units", "metric")

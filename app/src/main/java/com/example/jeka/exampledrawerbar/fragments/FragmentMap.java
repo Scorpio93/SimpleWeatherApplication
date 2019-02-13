@@ -55,18 +55,22 @@ import com.google.android.gms.maps.model.UrlTileProvider;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import static com.example.jeka.exampledrawerbar.model.OpenWeatherFetch.API_KEY;
+
 
 public class FragmentMap extends Fragment implements OnMapReadyCallback,
                                     AdapterView.OnItemSelectedListener {
     private static final String TAG = "FragmentMap";
     private static final int PERMISSION_REQUEST = 0;
     private static final String KEY_MAP_SAVED_STATE = "mapState";
-    private static final String MAP_URL = "http://tile.openweathermap.org/map/%s/%d/%d/%d.png?APPID=3798141df4bc230c87920ed24304f246";
+    private static final String MAP_URL = "http://tile.openweathermap.org/map/%s/%d/%d/%d.png?appid=" + API_KEY;
+
     private static final String MAP_TYPE_CLOUDS = "clouds";
     private static final String MAP_TYPE_PRECIPITATION = "precipitation";
     private static final String MAP_TYPE_PRESSURE = "pressure";
     private static final String MAP_TYPE_WIND = "wind";
     private static final String MAP_TYPE_TEMP = "temp";
+
     private final static int SELECT_CLOUDS = 0;
     private final static int SELECT_PRECIPITATION = 1;
     private final static int SELECT_PRESSURE = 2;
@@ -216,6 +220,8 @@ public class FragmentMap extends Fragment implements OnMapReadyCallback,
             @Override
             public URL getTileUrl(int x, int y, int zoom) {
                 String sUrl = String.format(MAP_URL, mapType, zoom, x, y);
+                Log.i(TAG, sUrl);
+
                 URL url = null;
 
                 try {
